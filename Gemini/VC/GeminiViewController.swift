@@ -32,7 +32,7 @@ class GeminiViewController: UIViewController {
     @IBAction func sendButtonClicked(_ sender: Any) {
         guard let userInput = textFeild.text, !userInput.isEmpty else {
             print("Please enter some text")
-            print("Please enter some text")
+            
             
             return
         }
