@@ -132,6 +132,7 @@
 				14B097812C9199460080A46D /* ViewModel */,
 				14B097822C9199530080A46D /* Model */,
 				14B097522C9198F90080A46D /* Assets.xcassets */,
+				14B0974F2C9198F70080A46D /* Main.storyboard */,
 				14B097542C9198F90080A46D /* LaunchScreen.storyboard */,
 				14B097572C9198F90080A46D /* Info.plist */,
 			);
@@ -158,12 +159,10 @@
 		14B0977C2C91991E0080A46D /* VC */ = {
 			isa = PBXGroup;
 			children = (
+				CA1ACF372CB6524B00042092 /* Login Vc */,
 				14B0974D2C9198F70080A46D /* GeminiViewController.swift */,
-				14008D8C2C9819E90028C766 /* GeminiLogInViewController.swift */,
-				14008D8E2C981A270028C766 /* GeminiSignUpViewController.swift */,
 				14B097832C919F800080A46D /* GeminiTableViewCell.swift */,
 				14008D922C982D1F0028C766 /* LuchScreenViewController.swift */,
-				14B0974F2C9198F70080A46D /* Main.storyboard */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -191,6 +190,15 @@
 				14B0974B2C9198F70080A46D /* SceneDelegate.swift */,
 			);
 			path = Delegate;
+			sourceTree = "<group>";
+		};
+		CA1ACF372CB6524B00042092 /* Login Vc */ = {
+			isa = PBXGroup;
+			children = (
+				14008D8C2C9819E90028C766 /* GeminiLogInViewController.swift */,
+				14008D8E2C981A270028C766 /* GeminiSignUpViewController.swift */,
+			);
+			path = "Login Vc";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
