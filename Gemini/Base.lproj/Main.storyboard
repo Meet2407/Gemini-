@@ -330,38 +330,79 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="7H7-ej-FeN">
-                                <rect key="frame" x="0.0" y="99" width="393" height="685"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="7H7-ej-FeN">
+                                <rect key="frame" x="0.0" y="104" width="393" height="680"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="GeminiTableViewCell" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="GeminiTableViewCell" rowHeight="72" id="YcE-Ta-Bw3" customClass="GeminiTableViewCell" customModule="Gemini" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="72"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="GeminiTableViewCell" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="GeminiTableViewCell" rowHeight="121" id="YcE-Ta-Bw3" customClass="GeminiTableViewCell" customModule="Gemini" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="121"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YcE-Ta-Bw3" id="a45-He-Khh">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="72"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="121"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fJE-B4-PHM">
-                                                    <rect key="frame" x="20" y="11" width="353" height="48"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5JP-zi-4a2">
+                                                    <rect key="frame" x="15" y="5" width="222" height="50"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5de-wb-7Z4">
+                                                            <rect key="frame" x="0.0" y="0.0" width="221" height="50"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="221" id="hUz-Yf-se4"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="353" id="eTZ-va-od4"/>
+                                                        <constraint firstItem="5de-wb-7Z4" firstAttribute="leading" secondItem="5JP-zi-4a2" secondAttribute="leading" id="BmM-r5-Nrt"/>
+                                                        <constraint firstAttribute="height" constant="50" id="Gut-mY-j5h"/>
+                                                        <constraint firstAttribute="trailing" secondItem="5de-wb-7Z4" secondAttribute="trailing" id="MFj-3L-4fY"/>
+                                                        <constraint firstAttribute="bottom" secondItem="5de-wb-7Z4" secondAttribute="bottom" id="vNe-sI-8sB"/>
+                                                        <constraint firstItem="5de-wb-7Z4" firstAttribute="top" secondItem="5JP-zi-4a2" secondAttribute="top" id="xxu-hC-R4o"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CuO-4V-bws">
+                                                    <rect key="frame" x="155" y="60" width="223" height="51"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U3g-LS-X0n">
+                                                            <rect key="frame" x="0.0" y="0.0" width="223" height="51"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="221" id="KSd-yP-WEt"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="6Pq-tz-hDr"/>
+                                                        <constraint firstAttribute="trailing" secondItem="U3g-LS-X0n" secondAttribute="trailing" id="Fb0-wC-nhp"/>
+                                                        <constraint firstItem="U3g-LS-X0n" firstAttribute="leading" secondItem="CuO-4V-bws" secondAttribute="leading" id="Gvl-pc-9xu"/>
+                                                        <constraint firstAttribute="bottom" secondItem="U3g-LS-X0n" secondAttribute="bottom" id="Xe9-5g-1rL"/>
+                                                        <constraint firstItem="U3g-LS-X0n" firstAttribute="top" secondItem="CuO-4V-bws" secondAttribute="top" id="zMV-Ze-Zff"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
-                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" systemColor="systemPinkColor"/>
                                             <constraints>
-                                                <constraint firstItem="fJE-B4-PHM" firstAttribute="leading" secondItem="a45-He-Khh" secondAttribute="leadingMargin" id="EGr-hl-7qM"/>
-                                                <constraint firstItem="fJE-B4-PHM" firstAttribute="top" secondItem="a45-He-Khh" secondAttribute="topMargin" id="Z3w-1s-XhJ"/>
-                                                <constraint firstItem="fJE-B4-PHM" firstAttribute="trailing" secondItem="a45-He-Khh" secondAttribute="trailingMargin" id="aDU-Cz-njm"/>
-                                                <constraint firstItem="fJE-B4-PHM" firstAttribute="bottom" secondItem="a45-He-Khh" secondAttribute="bottomMargin" constant="-2" id="kPj-zI-opA"/>
+                                                <constraint firstItem="5JP-zi-4a2" firstAttribute="top" secondItem="a45-He-Khh" secondAttribute="top" constant="5" id="1Ew-sP-wiq"/>
+                                                <constraint firstAttribute="trailing" secondItem="CuO-4V-bws" secondAttribute="trailing" constant="15" id="AFo-8N-hnr"/>
+                                                <constraint firstItem="CuO-4V-bws" firstAttribute="top" secondItem="5JP-zi-4a2" secondAttribute="bottom" constant="5" id="FrI-2U-wuc"/>
+                                                <constraint firstAttribute="trailing" secondItem="5JP-zi-4a2" secondAttribute="trailing" constant="156" id="Mhd-rD-imz"/>
+                                                <constraint firstItem="5JP-zi-4a2" firstAttribute="leading" secondItem="a45-He-Khh" secondAttribute="leading" constant="15" id="O1q-Cy-eQR"/>
+                                                <constraint firstAttribute="bottom" secondItem="CuO-4V-bws" secondAttribute="bottom" constant="10" id="iCD-8b-7Qf"/>
+                                                <constraint firstItem="CuO-4V-bws" firstAttribute="leading" secondItem="a45-He-Khh" secondAttribute="leading" constant="155" id="n4f-g6-8xa"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
-                                            <outlet property="geminiOne" destination="fJE-B4-PHM" id="fe0-Oh-Bd8"/>
+                                            <outlet property="bgview" destination="5JP-zi-4a2" id="eaV-Qb-EpZ"/>
+                                            <outlet property="bgviewTwo" destination="CuO-4V-bws" id="Dr6-ZR-Zen"/>
+                                            <outlet property="geminiOne" destination="5de-wb-7Z4" id="rUd-dG-M5B"/>
+                                            <outlet property="geminiTwo" destination="U3g-LS-X0n" id="okd-hy-z4L"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -456,7 +497,7 @@
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="whW-RK-lmR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="2Oc-Qp-5sI"/>
-                            <constraint firstItem="7H7-ej-FeN" firstAttribute="top" secondItem="IwT-6g-oCP" secondAttribute="bottom" constant="10" id="4PU-CQ-uh1"/>
+                            <constraint firstItem="7H7-ej-FeN" firstAttribute="top" secondItem="IwT-6g-oCP" secondAttribute="bottom" constant="15" id="4PU-CQ-uh1"/>
                             <constraint firstItem="IwT-6g-oCP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="5UW-bJ-gxT"/>
                             <constraint firstItem="7H7-ej-FeN" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="dch-Tk-MpZ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="whW-RK-lmR" secondAttribute="trailing" constant="16" id="j6p-LN-seP"/>
@@ -504,7 +545,7 @@
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="linkColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="secondarySystemGroupedBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -513,16 +554,19 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemMintColor">
-            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.78039215689999997" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemTealColor">
-            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.18823529410000001" green="0.69019607839999997" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tableCellPlainBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="tintColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
