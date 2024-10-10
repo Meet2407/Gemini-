@@ -23,11 +23,10 @@ class GeminiLogInViewController: UIViewController {
     
     @IBAction func logInBtnTapped(_ sender: Any) {
        
-        guard let email = userNameTextFeild.text, let password = passwordTextFeild.text else {
-            showAlert(title: "LogIn", message: "Please enter your email and password")
-            return
-        }
-
+        
+        var email = userNameTextFeild.text ?? ""
+        var password = passwordTextFeild.text ?? ""
+        
         // Validate email and password
         if !isValidEmail(email) {
             showAlert(title: "LogIn", message: "Please enter a valid email address")
@@ -38,7 +37,11 @@ class GeminiLogInViewController: UIViewController {
             showAlert(title: "LogIn", message: "Password must be at least 8 characters long, include upper and lower case letters, a number, and a special character.")
             return
         }
-
+        
+        print(UserDefaultHelper.helper.userName)
+        print(UserDefaultHelper.helper.password)
+        
+        
         // Check if the credentials match
         if email == UserDefaultHelper.helper.userName && password == UserDefaultHelper.helper.password {
             UserDefaultHelper.helper.logIn()

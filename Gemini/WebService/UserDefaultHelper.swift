@@ -32,7 +32,7 @@ class UserDefaultHelper{
     
     func readData()
     {
-        userName = UserDefaults.standard.string(forKey: "UserName") ?? ""
+        userName = UserDefaults.standard.string(forKey: "emailId") ?? ""
         password = UserDefaults.standard.string(forKey: "Password") ?? ""
         
     }

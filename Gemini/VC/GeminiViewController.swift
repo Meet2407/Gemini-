@@ -12,7 +12,8 @@ class GeminiViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        sendButton.layer.cornerRadius = 5
+        sendButton.layer.masksToBounds = true
         geminiTbl.rowHeight = UITableView.automaticDimension
         geminiTbl.estimatedRowHeight = 72
         
@@ -61,23 +62,28 @@ extension GeminiViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.geminiTbl.dequeueReusableCell(withIdentifier: "GeminiTableViewCell") as! GeminiTableViewCell
-        
+
         let conversationText = data[indexPath.row]
-        
+
         // Clean the text to remove unnecessary prefixes
-        let cleanedText = conversationText.replacingOccurrences(of: "User: ", with: "").replacingOccurrences(of: "AI: ", with: "")
-        
+        let cleanedText = conversationText.replacingOccurrences(of: "You: ", with: "").replacingOccurrences(of: "AI:\n ", with: "")
+
         cell.geminiOne?.text = cleanedText.trimmingCharacters(in: .whitespacesAndNewlines)
-        
-        // Alternate text alignment between user and AI
-        if indexPath.row % 2 == 0 {
+
+        if conversationText.hasPrefix("You:") {
+            cell.geminiOne.textColor = .white
             cell.geminiOne.textAlignment = .left
+            cell.backgroundColor = .black
         } else {
+            cell.geminiOne.textColor = .black
             cell.geminiOne.textAlignment = .right
+            cell.backgroundColor = .lightGray
         }
+        
         cell.geminiOne?.numberOfLines = 0
         return cell
     }
+
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension

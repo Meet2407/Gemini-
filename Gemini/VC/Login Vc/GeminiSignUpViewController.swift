@@ -37,7 +37,7 @@ class GeminiSignUpViewController: UIViewController {
         
         if emailIdTextFeild.text?.isEmpty == true {
             showAlert(title: "Registration", message: "Please enter your email")
-            return
+                return
         }
         
         if passwordTextFeild.text?.isEmpty == true {
