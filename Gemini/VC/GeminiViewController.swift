@@ -15,7 +15,7 @@ class GeminiViewController: UIViewController {
         sendButton.layer.cornerRadius = 5
         sendButton.layer.masksToBounds = true
         geminiTbl.rowHeight = UITableView.automaticDimension
-//        geminiTbl.estimatedRowHeight = 121
+        geminiTbl.estimatedRowHeight = 125
         sendButton.addTarget(self, action: #selector(sendButtonClicked), for: .touchUpInside)
         hideKeyboardWhenTappedAround()
     }
@@ -81,6 +81,6 @@ extension GeminiViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 125/*UITableView.automaticDimension*/
+        return UITableView.automaticDimension
     }
 }
